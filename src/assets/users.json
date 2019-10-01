@@ -1,0 +1,10 @@
+[
+  {
+    "fname": "Admin",
+    "lname": "Kowalski",
+    "city": "Bielsko-Biała",
+    "country": "Poland",
+    "email": "admin@o2.pl",
+    "password": "admin"
+  }
+]

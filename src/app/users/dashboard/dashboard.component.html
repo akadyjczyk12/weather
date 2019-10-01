@@ -1,0 +1,29 @@
+<br /><br />
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm">
+      <img src="../../../assets/download.png" alt="avatar" />
+    </div>
+    <div class="col-sm">
+      <h4>Podstawowe informacje</h4>
+      <p><b>Imie</b>: {{ user.fname | uppercase}}</p>
+      <p><b>Nazwisko</b>: {{ user.lname | uppercase }}</p>
+      <p><b>Kraj</b>: {{ user.country | uppercase }}</p>
+      <p><b>Miasto</b>: {{ user.city | uppercase }}</p>
+      <p><b>Adres Email</b>: {{ user.email }}</p>
+    </div>
+    <div class="col-sm">
+      <h4>Przybornik</h4>
+      <div class="controls">
+        <button class="btn btn-info">Aktualizacja</button>
+        <button class="btn btn-secondary" *ngIf="isAdmin">Generuj hasło</button>
+        <button class="btn btn-danger">Pobierz wizytówke</button>
+        <button class="btn btn-success">Sprawdź pogodę</button>
+      </div>
+    </div>
+    <div class="col-sm">
+        <h4>Aktualna pogoda</h4>
+        <p>słonacznie, 15C, Bielsko-Biała</p>
+    </div>
+  </div>
+</div>

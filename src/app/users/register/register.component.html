@@ -1,0 +1,65 @@
+<div class="container">
+  <br />
+  <h3>Rejestracja w serwisie</h3>
+  <br />
+  <div class="row">
+    <div class="col-sm">
+      <form [formGroup]="userForm" (submit)="saveUser()">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Imię</span>
+          </div>
+          <input type="text" class="form-control" formControlName="fname"/>
+        </div>
+        <app-control-messages [control]="userForm.get('fname')"></app-control-messages>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Nazwisko</span>
+          </div>
+          <input type="text" class="form-control" formControlName="lname"/>
+        </div>
+        <app-control-messages [control]="userForm.get('lname')"></app-control-messages>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" >Miasto</span>
+          </div>
+          <input type="text" class="form-control" formControlName="city"/>
+        </div>
+        <app-control-messages [control]="userForm.get('city')"></app-control-messages>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" >Kraj</span>
+          </div>
+          <select id="country" name="country" class="form-control" formControlName="country">
+            <option value="poland">Polska</option>
+          </select>
+        </div>
+        <app-control-messages [control]="userForm.get('country')"></app-control-messages>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Email</span>
+          </div>
+          <input type="text" class="form-control" formControlName="email"/>
+        </div>
+        <app-control-messages [control]="userForm.get('email')"></app-control-messages>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Hasło</span>
+          </div>
+          <input type="text" class="form-control" formControlName="password"/>
+        </div>
+        <app-control-messages [control]="userForm.get('password')"></app-control-messages>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Powtórz hasło</span>
+          </div>
+          <input type="text" class="form-control" formControlName="confirm"/>
+        </div>
+        <app-control-messages [control]="userForm.get('confirm')"></app-control-messages>
+        <div class="mt-3">
+          <button class="btn btn-success float-right" [disabled]="!userForm.valid">Rejestruj</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
